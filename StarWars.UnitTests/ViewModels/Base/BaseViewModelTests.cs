@@ -54,5 +54,12 @@
 			var vm = new BaseViewModel(title);
 			vm.Title.Should().Be(title);
 		}
+
+		[Test]
+		public void TheBackCommandClosesTheCurrentViewModelByDefault()
+		{
+			ViewModel.BackCommand.Execute();
+			MockDispatcher.Hints.Any(h => h.GetType() == typeof(MvxClosePresentationHint)).Should().BeTrue();
+		}
 	}
 }

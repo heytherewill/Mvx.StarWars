@@ -127,9 +127,6 @@
     <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>
-    <InterfaceDefinition Include="LaunchScreen.storyboard" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
     <None Include="packages.config" />
@@ -142,6 +139,7 @@
     <Compile Include="Views\MainView.cs" />
     <Compile Include="LinkerPleaseInclude.cs" />
     <Compile Include="Views\Base\BaseView.cs" />
+    <Compile Include="Views\PlanetsView.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StarWars.Core\StarWars.Core.csproj">

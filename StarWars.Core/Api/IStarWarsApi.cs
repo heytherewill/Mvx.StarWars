@@ -6,8 +6,8 @@
 
 	public interface IStarWarsApi
 	{
-		//[Get("/api/planets/")]
-		//Task<Result<List<Planet>>> GetPlanets();
+		[Get("/api/planets/?page={page}")]
+		Task<ResponseEntity<Planet>> GetPlanets(int page = 1);
 
 		[Get("/api/planets/{id}")]
 		Task<Planet> GetPlanet(int id);

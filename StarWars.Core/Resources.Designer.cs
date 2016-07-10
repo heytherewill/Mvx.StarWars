@@ -16,7 +16,7 @@ namespace StarWars.Core {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static System.Resources.ResourceManager resourceMan;
         
@@ -27,7 +27,7 @@ namespace StarWars.Core {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static System.Resources.ResourceManager ResourceManager {
+        public static System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.Equals(null, resourceMan)) {
                     System.Resources.ResourceManager temp = new System.Resources.ResourceManager("StarWars.Core.Resources", typeof(Resources).GetTypeInfo().Assembly);
@@ -38,7 +38,7 @@ namespace StarWars.Core {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static System.Globalization.CultureInfo Culture {
+        public static System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -47,43 +47,43 @@ namespace StarWars.Core {
             }
         }
         
-        internal static string Vehicles {
+        public static string Vehicles {
             get {
                 return ResourceManager.GetString("Vehicles", resourceCulture);
             }
         }
         
-        internal static string Films {
+        public static string Films {
             get {
                 return ResourceManager.GetString("Films", resourceCulture);
             }
         }
         
-        internal static string People {
+        public static string People {
             get {
                 return ResourceManager.GetString("People", resourceCulture);
             }
         }
         
-        internal static string Planets {
+        public static string Planets {
             get {
                 return ResourceManager.GetString("Planets", resourceCulture);
             }
         }
         
-        internal static string Species {
+        public static string Species {
             get {
                 return ResourceManager.GetString("Species", resourceCulture);
             }
         }
         
-        internal static string Starships {
+        public static string Starships {
             get {
                 return ResourceManager.GetString("Starships", resourceCulture);
             }
         }
         
-        internal static string Categories {
+        public static string Categories {
             get {
                 return ResourceManager.GetString("Categories", resourceCulture);
             }

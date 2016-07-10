@@ -1,21 +1,17 @@
-using System;
-using System.Diagnostics;
-using MvvmCross.Platform.Platform;
-
 namespace StarWars.Droid
 {
+	using System;
+	using System.Diagnostics;
+	using MvvmCross.Platform.Platform;
+	
     public class DebugTrace : IMvxTrace
     {
         public void Trace(MvxTraceLevel level, string tag, Func<string> message)
-        {
-            Debug.WriteLine(tag + ":" + level + ":" + message());
-        }
-
+			=> Debug.WriteLine(tag + ":" + level + ":" + message());
+        
         public void Trace(MvxTraceLevel level, string tag, string message)
-        {
-            Debug.WriteLine(tag + ":" + level + ":" + message);
-        }
-
+	        => Debug.WriteLine(tag + ":" + level + ":" + message);
+       
         public void Trace(MvxTraceLevel level, string tag, string message, params object[] args)
         {
             try

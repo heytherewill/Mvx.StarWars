@@ -116,10 +116,11 @@
     <Compile Include="Bootstrap\JsonPluginBootstrap.cs" />
     <Compile Include="Views\Base\BaseView.cs" />
     <Compile Include="Extensions\ColorExtensions.cs" />
+    <Compile Include="Views\PlanetsView.cs" />
+    <Compile Include="Views\PlanetView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
-    <None Include="Assets\AboutAssets.txt" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -136,11 +137,19 @@
     <AndroidResource Include="Resources\drawable\splash.png" />
     <AndroidResource Include="Resources\layout\AbcToolbar.axml" />
     <AndroidResource Include="Resources\values\Colors.xml" />
+    <AndroidResource Include="Resources\layout\PlanetsView.axml" />
+    <AndroidResource Include="Resources\layout\PlanetsViewListItem.axml" />
+    <AndroidResource Include="Resources\anim\SlideInFromLeft.xml" />
+    <AndroidResource Include="Resources\anim\SlideOutFromRight.xml" />
+    <AndroidResource Include="Resources\anim\SlideOutFromLeft.xml" />
+    <AndroidResource Include="Resources\anim\SlideInFromRight.xml" />
+    <AndroidResource Include="Resources\layout\PlanetView.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
     <Folder Include="Views\Base\" />
     <Folder Include="Extensions\" />
+    <Folder Include="Resources\anim\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StarWars.Core\StarWars.Core.csproj">

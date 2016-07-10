@@ -38,6 +38,8 @@
     <Compile Include="Api\IStarWarsApi.cs" />
     <Compile Include="Models\Planet.cs" />
     <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Helpers\ConstantsHelper.cs" />
@@ -48,6 +50,10 @@
     <Compile Include="ViewModels\SpeciesViewModel.cs" />
     <Compile Include="ViewModels\VehiclesViewModel.cs" />
     <Compile Include="ViewModels\StarshipsViewModel.cs" />
+    <Compile Include="Models\ResponseEntity.cs" />
+    <Compile Include="Extensions\EnumerableExtensions.cs" />
+    <Compile Include="ViewModels\PlanetViewModel.cs" />
+    <Compile Include="Parameters\IndexParameters.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MvvmCross.Platform">
@@ -97,11 +103,15 @@
     <Folder Include="Api\" />
     <Folder Include="Helpers\" />
     <Folder Include="Models\Enum\" />
+    <Folder Include="Models\Response\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Parameters\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

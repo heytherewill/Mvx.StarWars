@@ -138,6 +138,18 @@ namespace StarWars.Droid
 			// aapt resource value: 0x7f05000f
 			public const int design_snackbar_out = 2131034127;
 			
+			// aapt resource value: 0x7f050010
+			public const int SlideInFromLeft = 2131034128;
+			
+			// aapt resource value: 0x7f050011
+			public const int SlideInFromRight = 2131034129;
+			
+			// aapt resource value: 0x7f050012
+			public const int SlideOutFromLeft = 2131034130;
+			
+			// aapt resource value: 0x7f050013
+			public const int SlideOutFromRight = 2131034131;
+			
 			static Animation()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -2514,19 +2526,28 @@ namespace StarWars.Droid
 			public const int notification_template_part_time = 2130968623;
 			
 			// aapt resource value: 0x7f040030
-			public const int select_dialog_item_material = 2130968624;
+			public const int PlanetsView = 2130968624;
 			
 			// aapt resource value: 0x7f040031
-			public const int select_dialog_multichoice_material = 2130968625;
+			public const int PlanetsViewListItem = 2130968625;
 			
 			// aapt resource value: 0x7f040032
-			public const int select_dialog_singlechoice_material = 2130968626;
+			public const int PlanetView = 2130968626;
 			
 			// aapt resource value: 0x7f040033
-			public const int SplashScreen = 2130968627;
+			public const int select_dialog_item_material = 2130968627;
 			
 			// aapt resource value: 0x7f040034
-			public const int support_simple_spinner_dropdown_item = 2130968628;
+			public const int select_dialog_multichoice_material = 2130968628;
+			
+			// aapt resource value: 0x7f040035
+			public const int select_dialog_singlechoice_material = 2130968629;
+			
+			// aapt resource value: 0x7f040036
+			public const int SplashScreen = 2130968630;
+			
+			// aapt resource value: 0x7f040037
+			public const int support_simple_spinner_dropdown_item = 2130968631;
 			
 			static Layout()
 			{

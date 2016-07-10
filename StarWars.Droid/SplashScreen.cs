@@ -1,9 +1,9 @@
-using Android.App;
-using Android.Content.PM;
-using MvvmCross.Droid.Views;
-
 namespace StarWars.Droid
 {
+	using Android.App;
+	using Android.Content.PM;
+	using MvvmCross.Droid.Views;
+	
     [Activity(
         Label = "StarWars.Droid"
         , MainLauncher = true

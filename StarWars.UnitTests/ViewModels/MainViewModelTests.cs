@@ -1,5 +1,6 @@
 ﻿namespace StarWars.UnitTests.ViewModels
 {
+	using Core;
 	using Core.ViewModels;
 	using FluentAssertions;
 	using NUnit.Framework;
@@ -7,8 +8,6 @@
 	[TestFixture]
 	public class MainViewModelTests : BaseViewModelTests<MainViewModel>
 	{
-		protected override MainViewModel CreateViewModel() => new MainViewModel();
-
 		[Test]
 		public void TheMainViewModelHasSixCategories()
 			=> ViewModel.Categories.Count.Should().Be(6);
@@ -36,6 +35,10 @@
 		[Test]
 		public void SelectingTheSixthCategoryShowsTheStarshipsViewModel()
 			=> CallCategoryCommandAndAssertViewModelWasShown<StarshipsViewModel>(5);
+
+		[Test]
+		public void TheMainViewModelsTitleIsCategories()
+			=> ViewModel.Title.Should().Be(Resources.Categories);
 
 		private void CallCategoryCommandAndAssertViewModelWasShown<TType>(int index)
 			where TType : BaseViewModel

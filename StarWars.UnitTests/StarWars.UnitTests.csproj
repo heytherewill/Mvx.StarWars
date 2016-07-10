@@ -54,12 +54,25 @@
     <Reference Include="MvvmCross.Core">
       <HintPath>..\packages\MvvmCross.Core.4.2.0\lib\net45\MvvmCross.Core.dll</HintPath>
     </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.5.10\lib\net45\Moq.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\MainViewModelTests.cs" />
     <Compile Include="ViewModels\Base\BaseViewModelTests.cs" />
     <Compile Include="MockDispatcher.cs" />
+    <Compile Include="ViewModels\FilmsViewModelTests.cs" />
+    <Compile Include="ViewModels\PeopleViewModelTests.cs" />
+    <Compile Include="ViewModels\PlanetsViewModelTests.cs" />
+    <Compile Include="ViewModels\PlanetViewModelTests.cs" />
+    <Compile Include="ViewModels\SpeciesViewModelTests.cs" />
+    <Compile Include="ViewModels\StarshipsViewModelTests.cs" />
+    <Compile Include="ViewModels\VehiclesViewModelTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

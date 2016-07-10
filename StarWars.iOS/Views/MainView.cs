@@ -6,12 +6,10 @@ namespace StarWars.iOS.Views
 	using MvvmCross.Binding.iOS.Views;
 
 	[Register("MainView")]
-	public class MainView : BaseView
+	public class MainView : BaseView<MainViewModel>
     {
-        public override void ViewDidLoad()
+        protected override void InitializeBindings()
         {
-            base.ViewDidLoad();
-
 			var source = new MvxStandardTableViewSource(TableView, "TitleText Name");
 			TableView.Source = source;
 

@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<mvvmcross.droid.support.v7.recyclerview.MvxRecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:local="http://schemas.android.com/apk/res-auto"
-    local:MvxBind="ItemsSource Categories; ItemClick CategoryCommand"
-    local:MvxItemTemplate="@layout/mainviewlistitem"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" />
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    <include
+        layout="@layout/abctoolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
+    <mvvmcross.droid.support.v7.recyclerview.MvxRecyclerView
+        local:MvxBind="ItemsSource Categories; ItemClick CategoryCommand"
+        local:MvxItemTemplate="@layout/mainviewlistitem"
+        local:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</android.support.design.widget.CoordinatorLayout>

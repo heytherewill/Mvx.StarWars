@@ -30,4 +30,7 @@
 	<data name="Starships" xml:space="preserve">
     	<value>Starships</value>
   	</data>
+	<data name="Categories" xml:space="preserve">
+    	<value>Categories</value>
+  	</data>
 </root>

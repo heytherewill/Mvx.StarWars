@@ -7,6 +7,7 @@ namespace StarWars.Core.ViewModels
 	public class MainViewModel : BaseViewModel
 	{
 		public MainViewModel()
+			: base(Resources.Categories)
 		{
 			CategoryCommand = new MvxCommand<Category>(CategoryCommandExecute);
 		}

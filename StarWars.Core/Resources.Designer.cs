@@ -82,5 +82,11 @@ namespace StarWars.Core {
                 return ResourceManager.GetString("Starships", resourceCulture);
             }
         }
+        
+        internal static string Categories {
+            get {
+                return ResourceManager.GetString("Categories", resourceCulture);
+            }
+        }
     }
 }

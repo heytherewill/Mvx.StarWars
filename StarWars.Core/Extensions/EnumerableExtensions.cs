@@ -1,4 +1,4 @@
-﻿namespace StarWars.Core
+﻿namespace StarWars.Core.Extensions
 {
 	using System.Collections.Generic;
 	using System.Collections.ObjectModel;

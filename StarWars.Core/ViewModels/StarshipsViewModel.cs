@@ -1,6 +1,13 @@
 ﻿namespace StarWars.Core.ViewModels
 {
-	public class StarshipsViewModel : BaseViewModel
+	using Models;
+	using System.Threading.Tasks;
+
+	public class StarshipsViewModel : BaseRefreshableViewModel<Starship, StarshipViewModel>
 	{
+		public StarshipsViewModel()
+			: base(Resources.Starships) { }
+
+		protected override Task<ResponseEntity<Starship>> FetchMoreItems(int page) => Api.GetStarships(page);
 	}
 }

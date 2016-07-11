@@ -1,6 +1,13 @@
 ﻿namespace StarWars.Core.ViewModels
 {
-	public class VehiclesViewModel : BaseViewModel
+	using Models;
+	using System.Threading.Tasks;
+
+	public class VehiclesViewModel : BaseRefreshableViewModel<Vehicle, VehicleViewModel>
 	{
+		public VehiclesViewModel()
+			: base(Resources.Vehicles) { }
+
+		protected override Task<ResponseEntity<Vehicle>> FetchMoreItems(int page) => Api.GetVehicles(page);
 	}
 }

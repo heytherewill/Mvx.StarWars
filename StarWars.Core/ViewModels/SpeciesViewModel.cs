@@ -1,6 +1,13 @@
 ﻿namespace StarWars.Core.ViewModels
 {
-	public class SpeciesViewModel : BaseViewModel
+	using Models;
+	using System.Threading.Tasks;
+
+	public class SpeciesViewModel : BaseRefreshableViewModel<Species, SpeciesDetailViewModel>
 	{
+		public SpeciesViewModel()
+			: base(Resources.Species) { }
+
+		protected override Task<ResponseEntity<Species>> FetchMoreItems(int page) => Api.GetSpecies(page);
 	}
 }

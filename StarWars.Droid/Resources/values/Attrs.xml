@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+  <declare-styleable name="HeaderRecyclerView">
+    <attr name="ItemTemplate" format="reference"/>
+    <attr name="HeaderTemplate" format="reference"/>
+    <attr name="FooterTemplate" format="reference"/> 
+  </declare-styleable>
+</resources>

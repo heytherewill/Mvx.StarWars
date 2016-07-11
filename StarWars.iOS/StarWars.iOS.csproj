@@ -140,6 +140,12 @@
     <Compile Include="LinkerPleaseInclude.cs" />
     <Compile Include="Views\Base\BaseView.cs" />
     <Compile Include="Views\PlanetsView.cs" />
+    <Compile Include="Views\Base\BaseRefreshableView.cs" />
+    <Compile Include="Views\PeopleView.cs" />
+    <Compile Include="Views\StarshipsView.cs" />
+    <Compile Include="Views\SpeciesView.cs" />
+    <Compile Include="Views\FilmsView.cs" />
+    <Compile Include="Views\VehiclesView.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StarWars.Core\StarWars.Core.csproj">

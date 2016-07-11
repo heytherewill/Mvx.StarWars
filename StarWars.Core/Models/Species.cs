@@ -1,6 +1,6 @@
 ﻿namespace StarWars.Core.Models
 {
-	public class Planet : BaseModel
+	public class Species : BaseModel
 	{
 	}
 }

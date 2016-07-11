@@ -8,6 +8,7 @@
 	using Core.ViewModels;
 	using MvvmCross.Droid.Support.V7.AppCompat;
 	using Android.Views;
+	using System.ComponentModel;
 
 	public abstract class BaseView<TViewModel> : MvxAppCompatActivity<TViewModel>
 		where TViewModel : BaseViewModel
@@ -59,12 +60,21 @@
 			toolbar.SetTitleTextColor(color);
 			toolbar.NavigationClick += OnNavigationClick;
 
+			ViewModel.PropertyChanged += OnPropertyChanged;
+
 			if (Build.VERSION.SdkInt < BuildVersionCodes.Lollipop) return;
 
 			var window = Window;
 			window.ClearFlags(WindowManagerFlags.TranslucentStatus);
 			window.AddFlags(WindowManagerFlags.DrawsSystemBarBackgrounds);
 			window.SetStatusBarColor(Resource.Color.PrimaryDark.ToColor(this));
+		}
+
+		private void OnPropertyChanged(object sender, PropertyChangedEventArgs e)
+		{
+			if (e.PropertyName != nameof(ViewModel.Title)) return;
+
+			SupportActionBar.Title = ViewModel.Title;
 		}
 
 		private void OnNavigationClick(object sender, Toolbar.NavigationClickEventArgs e)

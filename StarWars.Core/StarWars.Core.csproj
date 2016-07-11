@@ -54,11 +54,22 @@
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="ViewModels\PlanetViewModel.cs" />
     <Compile Include="Parameters\IndexParameters.cs" />
+    <Compile Include="Extensions\TaskExtensions.cs" />
+    <Compile Include="Models\ApiResult.cs" />
+    <Compile Include="ViewModels\Base\BaseRefreshableViewModel.cs" />
+    <Compile Include="Models\BaseModel.cs" />
+    <Compile Include="Models\Starship.cs" />
+    <Compile Include="Models\Film.cs" />
+    <Compile Include="Models\Vehicle.cs" />
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="ViewModels\SpeciesDetailViewModel.cs" />
+    <Compile Include="Models\Species.cs" />
+    <Compile Include="ViewModels\StarshipViewModel.cs" />
+    <Compile Include="ViewModels\FilmViewModel.cs" />
+    <Compile Include="ViewModels\VehicleViewModel.cs" />
+    <Compile Include="ViewModels\PersonViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="MvvmCross.Platform">
-      <HintPath>..\packages\MvvmCross.Platform.4.1.4\lib\portable-net45+win+wpa81+wp80\MvvmCross.Platform.dll</HintPath>
-    </Reference>
     <Reference Include="MvvmCross.Core">
       <HintPath>..\packages\MvvmCross.Core.4.1.4\lib\portable-net45+win+wpa81+wp80\MvvmCross.Core.dll</HintPath>
     </Reference>
@@ -91,6 +102,12 @@
     </Reference>
     <Reference Include="Microsoft.Threading.Tasks.Extensions">
       <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net45+win8+wp8+wpa81\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Platform">
+      <HintPath>..\packages\MvvmCross.Platform.4.2.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Visibility">
+      <HintPath>..\packages\MvvmCross.Plugin.Visibility.4.2.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.Visibility.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

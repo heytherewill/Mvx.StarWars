@@ -8,18 +8,16 @@
         layout="@layout/abctoolbar"
         android:layout_height="wrap_content"
         android:layout_width="match_parent" />
-    <android.support.v4.widget.NestedScrollView
+    <android.support.v4.widget.SwipeRefreshLayout
+        local:MvxBind="RefreshCommand RefreshCommand"
         local:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <LinearLayout
-            android:orientation="vertical"
+        <starwars.droid.controls.InfiniteScrollRecyclerView
+            local:MvxBind="ItemsSource Items; ItemClick ItemClickCommand; Visibility Visibility(Items.Count); LastIndexedItem Items.Count; FetchMoreItemsCommand FetchMoreItemsCommand; ViewModel ."
+            local:ItemTemplate="@layout/filmsviewlistitem"
+            local:FooterTemplate="@layout/baseviewlistfooter"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <TextView
-                local:MvxBind="Text Planet.Name"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent" />
-        </LinearLayout>
-    </android.support.v4.widget.NestedScrollView>
+            android:layout_height="match_parent" />
+    </android.support.v4.widget.SwipeRefreshLayout>
 </android.support.design.widget.CoordinatorLayout>

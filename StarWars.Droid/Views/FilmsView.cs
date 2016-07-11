@@ -4,7 +4,8 @@ namespace StarWars.Droid.Views
 	using Core.ViewModels;
 	
 	[Activity(Theme = "@style/StarWarsTheme")]
-    public class PlanetsView : BaseRefreshableView<PlanetsViewModel>
+    public class FilmsView : BaseRefreshableView<FilmsViewModel>
     {
+		protected override int LayoutId => Resource.Layout.FilmsView;
     }
 }	

@@ -4,7 +4,7 @@ namespace StarWars.Droid.Views
 	using Core.ViewModels;
 	
 	[Activity(Theme = "@style/StarWarsTheme")]
-    public class PlanetsView : BaseRefreshableView<PlanetsViewModel>
+    public class VehiclesView : BaseRefreshableView<VehiclesViewModel>
     {
     }
 }	

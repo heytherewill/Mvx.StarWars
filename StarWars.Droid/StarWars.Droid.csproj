@@ -104,6 +104,12 @@
     <Reference Include="Xamarin.Android.Support.Design">
       <HintPath>..\packages\Xamarin.Android.Support.Design.23.3.0\lib\MonoAndroid43\Xamarin.Android.Support.Design.dll</HintPath>
     </Reference>
+    <Reference Include="MvvmCross.Plugins.Visibility">
+      <HintPath>..\packages\MvvmCross.Plugin.Visibility.4.2.0\lib\MonoAndroid\MvvmCross.Plugins.Visibility.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Visibility.Droid">
+      <HintPath>..\packages\MvvmCross.Plugin.Visibility.4.2.0\lib\MonoAndroid\MvvmCross.Plugins.Visibility.Droid.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -118,6 +124,17 @@
     <Compile Include="Extensions\ColorExtensions.cs" />
     <Compile Include="Views\PlanetsView.cs" />
     <Compile Include="Views\PlanetView.cs" />
+    <Compile Include="Bootstrap\VisibilityPluginBootstrap.cs" />
+    <Compile Include="Binding\RefreshLayoutRefreshCommandTargetBinding.cs" />
+    <Compile Include="Binding\BaseTargetBinding.cs" />
+    <Compile Include="Controls\InfiniteScrollRecyclerView.cs" />
+    <Compile Include="Controls\HeaderFooterRecyclerView.cs" />
+    <Compile Include="Views\Base\BaseRefreshableView.cs" />
+    <Compile Include="Views\FilmsView.cs" />
+    <Compile Include="Views\SpeciesView.cs" />
+    <Compile Include="Views\PeopleView.cs" />
+    <Compile Include="Views\VehiclesView.cs" />
+    <Compile Include="Views\StarshipsView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -137,19 +154,25 @@
     <AndroidResource Include="Resources\drawable\splash.png" />
     <AndroidResource Include="Resources\layout\AbcToolbar.axml" />
     <AndroidResource Include="Resources\values\Colors.xml" />
-    <AndroidResource Include="Resources\layout\PlanetsView.axml" />
-    <AndroidResource Include="Resources\layout\PlanetsViewListItem.axml" />
+    <AndroidResource Include="Resources\layout\BaseView.axml" />
+    <AndroidResource Include="Resources\layout\BaseViewListItem.axml" />
     <AndroidResource Include="Resources\anim\SlideInFromLeft.xml" />
     <AndroidResource Include="Resources\anim\SlideOutFromRight.xml" />
     <AndroidResource Include="Resources\anim\SlideOutFromLeft.xml" />
     <AndroidResource Include="Resources\anim\SlideInFromRight.xml" />
     <AndroidResource Include="Resources\layout\PlanetView.axml" />
+    <AndroidResource Include="Resources\values\Attrs.xml" />
+    <AndroidResource Include="Resources\layout\BaseViewListFooter.axml" />
+    <AndroidResource Include="Resources\layout\FilmsView.axml" />
+    <AndroidResource Include="Resources\layout\FilmsViewListItem.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
     <Folder Include="Views\Base\" />
     <Folder Include="Extensions\" />
     <Folder Include="Resources\anim\" />
+    <Folder Include="Binding\" />
+    <Folder Include="Controls\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StarWars.Core\StarWars.Core.csproj">

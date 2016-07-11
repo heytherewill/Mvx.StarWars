@@ -1,6 +1,7 @@
 ﻿namespace StarWars.Core.ViewModels
 {
 	using Models;
+	using Extensions;
 	using PropertyChanged;
 
 	[ImplementPropertyChanged]
@@ -12,8 +13,14 @@
 			=> _index = parameters.Index;
 
 		public override async void Start()
-			=> Planet = await Api.GetPlanet(_index);
-	
+		{
+			var apiResult = await Api.GetPlanetById(_index).WithBusyIndicator(this);
+			if (!apiResult.Success) return;
+
+			Planet = apiResult.Data;
+			Title = Planet.Name;
+		}
+
 		public Planet Planet { get; set; }
 	}
 }

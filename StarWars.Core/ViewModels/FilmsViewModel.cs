@@ -1,7 +1,13 @@
 ﻿namespace StarWars.Core.ViewModels
 {
-	public class FilmsViewModel : BaseViewModel
+	using Models;
+	using System.Threading.Tasks;
+
+	public class FilmsViewModel : BaseRefreshableViewModel<Film, FilmViewModel>
 	{
+		public FilmsViewModel()
+			: base(Resources.Films) { }
+
+		protected override Task<ResponseEntity<Film>> FetchMoreItems(int page) => Api.GetFilms(page);
 	}
 }
-
